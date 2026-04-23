@@ -1,0 +1,12 @@
+.venv
+__pycache__
+*.pyc
+*.pyo
+.env
+.env.*
+model_cache
+threat_hunter.db
+.pytest_cache
+.mypy_cache
+.git
+.gitignore

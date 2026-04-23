@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(34, 211, 238, 0.07), transparent 60%),
+    radial-gradient(900px 600px at 110% 10%, rgba(167, 139, 250, 0.07), transparent 60%), #0b0f17;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+.card {
+  @apply rounded-xl border border-border bg-panel/70 backdrop-blur-sm;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition;
+}
+.btn-primary {
+  @apply btn bg-accent text-slate-900 hover:bg-cyan-300;
+}
+.btn-ghost {
+  @apply btn bg-panel2 text-slate-200 hover:bg-slate-700;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs font-medium;
+}
+
+.sev-critical { @apply bg-red-500/15 border-red-500/40 text-red-300; }
+.sev-high     { @apply bg-orange-500/15 border-orange-500/40 text-orange-300; }
+.sev-medium   { @apply bg-amber-500/15 border-amber-500/40 text-amber-300; }
+.sev-low      { @apply bg-emerald-500/15 border-emerald-500/40 text-emerald-300; }
+
+.cat-badge {
+  @apply inline-flex items-center rounded-md bg-accent/10 border border-accent/30 text-accent px-2 py-0.5 text-xs font-mono;
+}
